@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', (req, res) => {
-	res.end('Hello');
+	res.end(req.header['User-Agent']);
 })
 
 var port = process.env.PORT || 5000;
